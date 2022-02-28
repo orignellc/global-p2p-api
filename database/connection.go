@@ -2,11 +2,16 @@ package database
 
 import (
 	"fmt"
-	"github.com/orignellc/global-p2p-api/models"
+	"github.com/orignellc/global-p2p-api/app/models"
 	"github.com/orignellc/global-p2p-api/pkg/env"
 	"github.com/rs/zerolog/log"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+)
+
+var (
+	db *gorm.DB
+	err error
 )
 
 func SetupDatabase() {
@@ -19,7 +24,7 @@ func SetupDatabase() {
 		env.GetEnv("DB_PORT", "3306"),
 		env.GetEnv("DB_NAME", ""),
 	)
-	conn, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	db, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {
 		log.Err(err).
@@ -29,13 +34,13 @@ func SetupDatabase() {
 			Msg("Connecting to Database")
 	}
 
-	err = conn.AutoMigrate(
+	err = db.AutoMigrate(
 		&models.Client{},
 		&models.Transaction{},
-		)
+	)
 	if err != nil {
 		log.Panic().
 			Err(err).
-			Msg("Database Migration")
+			Msg("Migrating Database")
 	}
 }

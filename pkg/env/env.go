@@ -15,13 +15,13 @@ func GetEnv(key, def string) string {
 }
 
 func SetupEnvFile() {
-	envFile := ".env.main"
+	envFile := ".env"
 	var err error
 	Env, err = godotenv.Read(envFile)
 	if err != nil {
 		log.Panic().
 			Err(err).
-			Str("Environment File", ".env.main").
+			Str("Environment File", ".env").
 			Msg("Cannot Read Env")
 	}
 

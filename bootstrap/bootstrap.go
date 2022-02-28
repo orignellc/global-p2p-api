@@ -4,6 +4,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/orignellc/global-p2p-api/database"
 	"github.com/orignellc/global-p2p-api/pkg/env"
+	"github.com/orignellc/global-p2p-api/pkg/router"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 	"os"
@@ -16,13 +17,14 @@ func NewApplication() *fiber.App {
 	env.SetupEnvFile()
 	database.SetupDatabase()
 
-	app := fiber.New()
-	//engine := html.New("./views", ".html")
-	//app := fiber.New(fiber.Config{Views: engine})
+	app := fiber.New(fiber.Config{
+		CaseSensitive: true,
+	})
+
 	//app.Use(recover.New())
 	//app.Use(logger.New())
 	//app.Get("/dashboard", monitor.New())
-	//router.InstallRouter(app)
+	router.InstallRouter(app)
 
 	return app
 }

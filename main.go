@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/gofiber/fiber/v2"
+	"fmt"
 	"github.com/orignellc/global-p2p-api/bootstrap"
+	"github.com/orignellc/global-p2p-api/pkg/env"
 	"github.com/rs/zerolog/log"
 )
 
@@ -10,11 +11,13 @@ func main() {
 
 	app := bootstrap.NewApplication()
 
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Hello, World!")
-	})
-
-	err := app.Listen(":3000")
+	err := app.Listen(
+		fmt.Sprintf(
+			"%s:%s",
+			env.GetEnv("APP_HOST", "localhost"),
+			env.GetEnv("APP_PORT", "3000"),
+		),
+	)
 	if err != nil {
 		log.Err(err).
 			Msg("Serving Application")
