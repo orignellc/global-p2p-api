@@ -10,6 +10,7 @@ type ApiV1Router struct {
 }
 
 func (h ApiV1Router) InstallRouter(app *fiber.App) {
+
 	api := app.Group("/api/v1", limiter.New())
 
 	api.Route("clients/", func(api fiber.Router) {

@@ -36,11 +36,16 @@ func SetupDatabase() {
 
 	err = db.AutoMigrate(
 		&models.Client{},
-		&models.Transaction{},
+		//&models.Transaction{},
 	)
 	if err != nil {
 		log.Panic().
 			Err(err).
 			Msg("Migrating Database")
 	}
+
+}
+
+func GetDB() *gorm.DB {
+	return db
 }
