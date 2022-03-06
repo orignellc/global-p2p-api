@@ -11,23 +11,23 @@ type ApiV1Router struct {
 
 func (h ApiV1Router) InstallRouter(app *fiber.App) {
 
-	api := app.Group("/api/v1", limiter.New())
+	api := app.Group("/api/v1/", limiter.New())
 
 	api.Route("clients/", func(api fiber.Router) {
 		// List clients
 		api.Get("all", controllers.GetClients).Name("all")
 
 		// Get client by ID
-		api.Get("/{id:[0-9]+}", controllers.GetClientByID).Name("show")
+		api.Get("{id:[0-9]+}", controllers.GetClientByID).Name("show")
 
 		// Add a new client
-		api.Post("/create",controllers.AddNewClient).Name("create")
+		api.Post("create",controllers.AddNewClient).Name("create")
 
 		// Update a client by ID
-		api.Patch("/update/{id:[0-9]+}", controllers.UpdateClientByID).Name("update")
+		api.Patch("update/{id:[0-9]+}", controllers.UpdateClientByID).Name("update")
 
 		// Delete client by ID
-		api.Delete("/delete/{id:[0-9]+}", controllers.DeleteClientByID).Name("delete")
+		api.Delete("delete/{id:[0-9]+}", controllers.DeleteClientByID).Name("delete")
 	},"clients.")
 }
 

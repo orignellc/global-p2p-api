@@ -3,7 +3,6 @@ package bootstrap
 import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
-	"github.com/gofiber/fiber/v2/middleware/csrf"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/gofiber/fiber/v2/middleware/monitor"
 	"github.com/gofiber/fiber/v2/middleware/recover"
@@ -47,7 +46,7 @@ func NewApplication() *fiber.App {
 	}))
 
 	// Middleware to add csrf token to request
-	app.Use(csrf.New())
+	//app.Use(csrf.New())
 
 	// Middleware to log http requests to request.log file
 	app.Use(logger.New(logger.Config{

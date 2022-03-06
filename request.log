@@ -1,2 +1,12 @@
 [23:04:44] 200 - 515.017µs GET /api/v1/clients/all
 [23:18:16] 200 - 241.732µs GET /dashboard
+[01:24:43] 405 - 185.036µs GET /api/v1/clients/create
+[01:45:34] 400 - 602.696µs POST /api/v1/clients/create
+[01:57:25] 400 - 551.157µs POST /api/v1/clients/create
+[02:00:07] 400 - 697.934µs POST /api/v1/clients/create
+[02:00:32] 500 - 402.816µs POST /api/v1/clients/create
+[02:00:37] 400 - 179.498µs POST /api/v1/clients/create
+[02:04:53] 500 - 221.042µs POST /api/v1/clients/create
+[02:05:01] 500 - 98.807µs POST /api/v1/clients/create
+[02:05:05] 400 - 219.103µs POST /api/v1/clients/create
+[02:05:53] 400 - 305.52µs POST /api/v1/clients/create
