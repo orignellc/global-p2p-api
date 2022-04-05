@@ -1,0 +1,18 @@
+[
+  {
+    "company_name" : "Origne LLC",
+    "email" : "piggyfi.africa@gmail.com",
+    "password": "Abcd1234",
+    "domain_whitelists" : [
+      "http://127.0.0.1",
+      "http://localhost",
+      "https://piggyfi.africa"
+    ],
+    "webhook_url" : "https://piggyfi.africa/webhook",
+    "website" : "https://piggyfi.africa",
+    "phone" : "+2348161608442",
+    "bio": "Solving money problems for Africans using the blockchain",
+    "callback_url": "https://",
+    "country_code": "1"
+  }
+]

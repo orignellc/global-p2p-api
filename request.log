@@ -10,3 +10,100 @@
 [02:05:01] 500 - 98.807µs POST /api/v1/clients/create
 [02:05:05] 400 - 219.103µs POST /api/v1/clients/create
 [02:05:53] 400 - 305.52µs POST /api/v1/clients/create
+[16:10:38] 200 - 854.167µs GET /api/v1/clients/all
+[10:05:35] 200 - 1.598184ms GET /api/v1/clients/all
+[10:07:22] 200 - 2.44297ms GET /api/v1/clients/all
+[13:59:15] 200 - 1.206249ms GET /api/v1/clients/all
+[13:59:33] 200 - 7.163µs POST /api/v1/clients/create
+[13:59:36] 200 - 6.951µs POST /api/v1/clients/create
+[14:00:27] 200 - 1.097879ms GET /api/v1/clients/all
+[90m4:54PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"invalid field found for struct github.com/orignellc/global-p2p-api/database.Client's field Country: define a valid foreign key for relations or implement the Valuer/Scanner interface"[0m
+[90m4:58PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"invalid field found for struct github.com/orignellc/global-p2p-api/database.Client's field Country: define a valid foreign key for relations or implement the Valuer/Scanner interface"[0m
+[90m5:00PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"invalid field found for struct github.com/orignellc/global-p2p-api/database.Client's field Country: define a valid foreign key for relations or implement the Valuer/Scanner interface"[0m
+[90m5:00PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',`iso3_code` text,unique,`dial_code` text,unique,PRIMARY KEY (`id`),INDEX idx_co' at line 1"[0m
+[90m5:00PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"invalid field found for struct github.com/orignellc/global-p2p-api/database.Client's field Country: define a valid foreign key for relations or implement the Valuer/Scanner interface"[0m
+[90m5:01PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"invalid field found for struct github.com/orignellc/global-p2p-api/database.Client's field Country: define a valid foreign key for relations or implement the Valuer/Scanner interface"[0m
+[90m5:01PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',`iso3_code` text,unique,`dial_code` text,unique,PRIMARY KEY (`id`),INDEX idx_co' at line 1"[0m
+[90m5:04PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',`iso2_code` unique,`iso3_code` unique,`dial_code` unique,PRIMARY KEY (`id`),IND' at line 1"[0m
+[90m5:05PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',`iso2_code` varchar(191) UNIQUE,`iso3_code` varchar(191) UNIQUE,`dial_code` var' at line 1"[0m
+[90m5:22PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m5:23PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m5:24PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"invalid field found for struct github.com/orignellc/global-p2p-api/database.Client's field Country: define a valid foreign key for relations or implement the Valuer/Scanner interface"[0m
+[90m5:24PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m5:55PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m5:59PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m5:59PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m6:00PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m6:00PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m6:05PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m6:06PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m6:38PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m6:38PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m6:46PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m6:50PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m6:51PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m6:52PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m6:55PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 3780: Referencing column 'country_id' and referenced column 'id' in foreign key constraint 'fk_clients_country' are incompatible."[0m
+[90m6:58PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 3780: Referencing column 'country_id' and referenced column 'id' in foreign key constraint 'fk_clients_country' are incompatible."[0m
+[90m6:59PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 3780: Referencing column 'country_id' and referenced column 'id' in foreign key constraint 'fk_clients_country' are incompatible."[0m
+[90m6:59PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 3780: Referencing column 'country_id' and referenced column 'id' in foreign key constraint 'fk_clients_country' are incompatible."[0m
+[90m7:01PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m11:25PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[90m11:26PM[0m [1m[31mPNC[0m[0m Migrating Database [36merror=[0m[31m"Error 1822: Failed to add the foreign key constraint. Missing index for constraint 'fk_clients_country' in the referenced table 'countries'"[0m
+[00:26:47] 200 - 26.484787ms GET /api/v1/clients/all
+[90m12:35AM[0m [1m[31mERR[0m[0m Seeding Countries [36merror=[0m[31m"open country.json: no such file or directory"[0m [36mFile Path=[0mcountry.json
+[90m12:35AM[0m [1m[31mERR[0m[0m Unable to Unmarshal countries [36merror=[0m[31m"unexpected end of JSON input"[0m [36mFile Path=[0mcountry.json
+[90m12:36AM[0m [1m[31mERR[0m[0m Seeding Countries [36merror=[0m[31m"open seeders/country.json: no such file or directory"[0m [36mFile Path=[0mcountry.json
+[90m12:36AM[0m [1m[31mERR[0m[0m Unable to Unmarshal countries [36merror=[0m[31m"unexpected end of JSON input"[0m [36mFile Path=[0mcountry.json
+[90m12:37AM[0m [1m[31mERR[0m[0m Seeding Countries [36merror=[0m[31m"open seeders/country.json: no such file or directory"[0m [36mFile Path=[0mcountry.json
+[90m12:37AM[0m [1m[31mERR[0m[0m Unable to Unmarshal countries [36merror=[0m[31m"unexpected end of JSON input"[0m [36mFile Path=[0mcountry.json
+[90m12:38AM[0m [1m[31mERR[0m[0m Seeding Countries [36merror=[0m[31m"open seeders/country.json: no such file or directory"[0m [36mFile Path=[0mcountry.json
+[90m12:38AM[0m [1m[31mERR[0m[0m Unable to Unmarshal countries [36merror=[0m[31m"unexpected end of JSON input"[0m [36mFile Path=[0mcountry.json
+[90m12:39AM[0m [1m[31mERR[0m[0m Error Opening File [36merror=[0m[31m"open seeders/country.json: no such file or directory"[0m [36mFile Path=[0mcountry.json
+[90m12:39AM[0m [1m[31mERR[0m[0m Unable to Unmarshal countries [36merror=[0m[31m"unexpected end of JSON input"[0m [36mFile Path=[0mcountry.json
+[90m12:40AM[0m [1m[31mERR[0m[0m Error Opening File [36merror=[0m[31m"open seeders/country.json: no such file or directory"[0m [36mFile Path=[0mcountry.json
+[90m12:40AM[0m [1m[31mERR[0m[0m Unable to Unmarshal countries [36merror=[0m[31m"unexpected end of JSON input"[0m [36mFile Path=[0mcountry.json
+[90m12:41AM[0m [1m[31mERR[0m[0m Error Opening File [36merror=[0m[31m"open seeders/country.json: no such file or directory"[0m [36mFile Path=[0mcountry.json
+[20:28:42] 200 - 41.868588ms GET /api/v1/clients/all
+[20:32:47] 200 - 1.06724ms GET /api/v1/countries/all
+[20:33:59] 404 - 140.35µs GET /api/v1/countries/1
+[07:02:48] 404 - 19.147µs GET /api/v1/clients/1
+[07:02:52] 404 - 12.228µs GET /api/v1/countries/1
+[07:05:05] 404 - 11.768µs GET /api/v1/countries/1
+[07:13:06] 404 - 18.028µs GET /api/v1/countries/1
+[07:16:16] 404 - 13.266µs GET /api/v1/countries/1
+[07:16:27] 404 - 13.442µs GET /api/v1/countries/1
+[07:16:36] 404 - 20.82µs GET /api/v1/countries/1
+[07:17:15] 404 - 13.089µs GET /api/v1/countries/1
+[07:17:17] 404 - 20.24µs GET /api/v1/countries/1
+[07:17:58] 200 - 302.332129ms GET /api/v1/clients/all
+[07:18:15] 200 - 349.958µs GET /api/v1/clients/all
+[07:18:46] 404 - 31.459µs GET /api/v1/countries/1
+[07:18:47] 404 - 14.384µs GET /api/v1/countries/1
+[07:21:03] 200 - 1.003725ms GET /api/v1/countries/1
+[07:21:13] 200 - 85.489204ms GET /api/v1/countries/21
+[07:28:39] 200 - 1.336927ms GET /api/v1/countries/21
+[07:28:55] 404 - 53.906348ms GET /api/v1/countries/21
+[07:29:01] 200 - 32.992547ms GET /api/v1/countries/1
+[07:29:09] 404 - 2.273011ms GET /api/v1/countries/100
+[07:29:26] 200 - 816.112µs GET /api/v1/countries/1
+[07:42:19] 422 - 2.176813ms POST /api/v1/clients/create
+[08:02:36] 500 - 655.385µs POST /api/v1/clients/create
+[08:02:46] 500 - 164.206µs POST /api/v1/clients/create
+[08:02:56] 422 - 262.547µs POST /api/v1/clients/create
+[08:03:18] 422 - 322.711µs POST /api/v1/clients/create
+[08:11:31] 422 - 565.273µs POST /api/v1/clients/create
+[15:08:21] 200 - 128.913678ms POST /api/v1/clients/create
+[15:08:47] 200 - 8.232845ms POST /api/v1/clients/create
+[15:18:35] 200 - 10.296378ms POST /api/v1/clients/create
+[15:19:28] 200 - 136.644169ms POST /api/v1/clients/create
+[15:21:04] 200 - 127.97236ms POST /api/v1/clients/create
+[15:22:31] 200 - 14.313842ms POST /api/v1/clients/create
+[15:23:36] 200 - 4.381945ms POST /api/v1/clients/create
+[15:25:00] 200 - 49.459455ms POST /api/v1/clients/create
+[15:25:08] 200 - 47.937618ms POST /api/v1/clients/create
+[15:44:42] 200 - 74.721613ms POST /api/v1/clients/create
+[15:49:57] 200 - 203.569261ms POST /api/v1/clients/create
+[15:51:50] 200 - 89.38075ms POST /api/v1/clients/create
+[16:06:58] 200 - 51.688935ms POST /api/v1/clients/create
+[16:08:21] 200 - 120.22222ms POST /api/v1/clients/create

@@ -31,6 +31,7 @@ func NewApplication() *fiber.App {
 
 	env.SetupEnvFile()
 	database.SetupDatabase()
+	database.RunSeeder()
 
 	app := fiber.New(fiber.Config{
 		CaseSensitive: true,

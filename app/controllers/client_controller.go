@@ -2,60 +2,53 @@ package controllers
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"github.com/orignellc/global-p2p-api/app/models"
+	"github.com/orignellc/global-p2p-api/app/logics"
 	"github.com/orignellc/global-p2p-api/database"
 	"github.com/orignellc/global-p2p-api/pkg/util"
-	"gorm.io/gorm"
+	"strconv"
 )
 
-type ClientData struct {
-	models.ClientBasic
-	DomainWhitelists []string `json:"domain_whitelists"`
-}
-
-var db *gorm.DB
-
-func init() {
-	db = database.GetDB()
-}
-
-func (*ClientData) ModelName() string {
-	return "client"
-}
 
 func GetClients(ctx *fiber.Ctx) error {
-	var clients []ClientData
-
-	db.Find(clients)
-
-	return ctx.Status(fiber.StatusOK).JSON(clients)
+	return ctx.Status(fiber.StatusOK).JSON(logics.Clients())
 }
 
 func GetClientByID(ctx *fiber.Ctx) error {
+	strIdVar := ctx.Params("id")
+	intIdVar, _ := strconv.Atoi(strIdVar)
 
-	return ctx.JSON(ctx.App().Stack())
+	_client := logics.GetClientById(uint(intIdVar))
+	_httpStatus := fiber.StatusOK
+
+	if  _client.ID == 0 {
+		_httpStatus = fiber.StatusNotFound
+	}
+
+	return ctx.Status(_httpStatus).JSON(_client)
 }
+
 
 func AddNewClient(ctx *fiber.Ctx) error {
 	ctx.Accepts(fiber.HeaderContentType,fiber.MIMEApplicationJSON)
 
-	var client ClientData
+	var clientData = new(database.ClientData)
 
-	if err := ctx.BodyParser(&client); err != nil {
+	if err := ctx.BodyParser(&clientData); err != nil {
 		return ctx.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
 			"message": err.Error(),
 		})
 	}
 
-	errors := util.ValidateStruct(&client)
-	if errors != nil {
-		return ctx.Status(fiber.StatusBadRequest).JSON(errors)
+	data, errorWrapper := logics.NewClient(clientData)
 
+	if errorWrapper != nil {
+		switch errorWrapper.Type {
+		case util.ValidationError:
+			return ctx.Status(fiber.StatusUnprocessableEntity).JSON(errorWrapper.Details)
+		}
 	}
 
-	db.Create(client)
-
-	return ctx.Status(fiber.StatusOK).JSON(client)
+	return ctx.Status(fiber.StatusOK).JSON(data.Public())
 }
 
 func UpdateClientByID(ctx *fiber.Ctx) error {

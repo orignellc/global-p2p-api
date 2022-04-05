@@ -1,0 +1,51 @@
+[
+  {
+    "name" : "Nigeria",
+    "iso2_code" : "NG",
+    "iso3_code" : "NGA",
+    "dial_code" : "+234",
+    "flag" : "https://cdn.kcak11.com/CountryFlags/countries/ng.svg"
+  },
+  {
+    "name": "Ghana",
+    "dial_code": "+233",
+    "iso2_code": "GH",
+    "iso3_code": "GHA",
+    "flag": "https://cdn.kcak11.com/CountryFlags/countries/gh.svg"
+  },
+  {
+    "name": "Kenya",
+    "dial_code": "+254",
+    "iso2_code": "KE",
+    "iso3_code": "KEN",
+    "flag": "https://cdn.kcak11.com/CountryFlags/countries/ke.svg"
+  },
+  {
+    "name": "South Africa",
+    "dial_code": "+27",
+    "iso2_code": "ZA",
+    "iso3_code": "ZAF",
+    "flag": "https://cdn.kcak11.com/CountryFlags/countries/ke.svg"
+  },
+  {
+    "name": "Zimbabwe",
+    "dial_code": "+263",
+    "iso2_code": "ZW",
+    "iso3_code": "ZWE",
+    "flag": "https://cdn.kcak11.com/CountryFlags/countries/zw.svg"
+  },
+  {
+    "name": "Mauritius",
+    "dial_code": "+230",
+    "iso2_code": "MU",
+    "iso3_code": "MUS",
+    "flag": "https://cdn.kcak11.com/CountryFlags/countries/mu.svg"
+  },
+  {
+    "name": "Botswana",
+    "dial_code": "+267",
+    "iso2_code": "BW",
+    "iso3_code": "BWA",
+    "flag": "https://cdn.kcak11.com/CountryFlags/countries/bw.svg"
+  }
+]

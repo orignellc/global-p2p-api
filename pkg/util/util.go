@@ -1,7 +1,13 @@
 package util
 
 import (
+	"fmt"
 	"github.com/go-playground/validator/v10"
+	"os"
+)
+
+const (
+	ValidationError            = "validation error"
 )
 
 type ErrorResponse struct {
@@ -14,7 +20,22 @@ type Model interface {
 	ModelName() string
 }
 
+type ErrorWrapper struct {
+	Type string
+	Details interface{}
+}
+
 var validate = validator.New()
+
+func ProjectPath() string {
+	WD, _ := os.Getwd()
+
+	return WD
+}
+
+func SeederPath() string  {
+	return fmt.Sprintf("%s/database/seeders", ProjectPath())
+}
 
 func ValidateStruct(model Model) []*ErrorResponse {
 	var errors []*ErrorResponse
